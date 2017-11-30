@@ -1,0 +1,95 @@
+Please choose one of the following options:
+  1: Add a new letter in postbox
+  2: Save a postbox to file
+  3: Read a postbox from file
+  4: Print all letters in postbox
+  5: Empty postbox to postbag
+
+  0: Exit
+1
+
+Please input who you are: daniel
+Please input who receives the letter: samanda
+Please choose one of the following options:
+  1: Add a new letter in postbox
+  2: Save a postbox to file
+  3: Read a postbox from file
+  4: Print all letters in postbox
+  5: Empty postbox to postbag
+
+  0: Exit
+1
+
+Please input who you are: polpo
+Please input who receives the letter: delfino
+Please choose one of the following options:
+  1: Add a new letter in postbox
+  2: Save a postbox to file
+  3: Read a postbox from file
+  4: Print all letters in postbox
+  5: Empty postbox to postbag
+
+  0: Exit
+4
+samanda 		daniel
+delfino 		polpo
+Please choose one of the following options:
+  1: Add a new letter in postbox
+  2: Save a postbox to file
+  3: Read a postbox from file
+  4: Print all letters in postbox
+  5: Empty postbox to postbag
+
+  0: Exit
+2
+Please choose one of the following options:
+  1: Add a new letter in postbox
+  2: Save a postbox to file
+  3: Read a postbox from file
+  4: Print all letters in postbox
+  5: Empty postbox to postbag
+
+  0: Exit
+1
+
+Please input who you are: polpo12
+Please input who receives the letter: manuel
+Please choose one of the following options:
+  1: Add a new letter in postbox
+  2: Save a postbox to file
+  3: Read a postbox from file
+  4: Print all letters in postbox
+  5: Empty postbox to postbag
+
+  0: Exit
+2
+Please choose one of the following options:
+  1: Add a new letter in postbox
+  2: Save a postbox to file
+  3: Read a postbox from file
+  4: Print all letters in postbox
+  5: Empty postbox to postbag
+
+  0: Exit
+3
+Please choose one of the following options:
+  1: Add a new letter in postbox
+  2: Save a postbox to file
+  3: Read a postbox from file
+  4: Print all letters in postbox
+  5: Empty postbox to postbag
+
+  0: Exit
+4
+samanda 		daniel
+delfino 		polpo
+manuel 		polpo12
+Please choose one of the following options:
+  1: Add a new letter in postbox
+  2: Save a postbox to file
+  3: Read a postbox from file
+  4: Print all letters in postbox
+  5: Empty postbox to postbag
+
+  0: Exit
+0
