@@ -55,6 +55,7 @@ public class PostBox  {
 	 *            all letters of the postbox will be moved to this postbag
 	 */
 	public void emptyToPostBag(PostBag postBag) {
+		this.postbox.clear();
 		
 
 	}
@@ -78,11 +79,11 @@ public class PostBox  {
 	 * reads letters from a file and adds them to the PostBox
 	 */
 	public void loadLettersFromFile() {
-		ArrayList<Letter> postbox = new ArrayList<Letter>();
+		
 		File file = new File("src/test.txt");
 		try (ObjectInputStream in = 
 				new ObjectInputStream(new FileInputStream(file))){
-			postbox = (ArrayList<Letter>) in.readObject();
+			this.postbox = (ArrayList<Letter>) in.readObject();
 		} catch (IOException | ClassNotFoundException ex) {
 			System.out.printf("A problem occured deserializing %s%n", file);
 			System.out.println(ex.getMessage());
