@@ -2,17 +2,19 @@ package de.unistuttgart.iaas.pse.ex04.p3;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 
-public class PostBox extends PostBag {
-	
+public class PostBox  {
+	ArrayList<Letter> postbox = new ArrayList<Letter>();
 	
 
 	/**
 	 * constructor for the PostBox
 	 */
 	public PostBox() {
-		PostBox postbox = new PostBox();
+		ArrayList<Letter> postbox = new ArrayList<Letter>();
 
 	}
 
@@ -23,10 +25,12 @@ public class PostBox extends PostBag {
 	 *            the letters to add
 	 */
 	public void addLetters(Letter... letters) {
-		addLetter(letters);
 		
-				
-
+		for(int i = 0; i< letters.length; i++){
+	           this.postbox.add(letters[i]);
+	       }
+		
+						
 	}
 
 	/**
@@ -34,7 +38,9 @@ public class PostBox extends PostBag {
 	 * post box to the console
 	 */
 	public void printAll() {
-		getLetters();
+		
+		for ( Letter x : this.postbox)
+			System.out.println(x.getRecipient()+ " 		" +x.getSender());
 		
 		
 		
@@ -57,6 +63,14 @@ public class PostBox extends PostBag {
 	 * saves all letters in a file
 	 */
 	public void saveLettersToFile() {
+		File file = new File("src/test.txt");
+		try (ObjectOutputStream out = 
+				new ObjectOutputStream(new FileOutputStream(file))){
+			out.writeObject(this.postbox);
+		}catch ( IOException ex ) {
+			System.out.println("A problem occured during serialization");
+			System.out.println(ex.getMessage());
+		}
 
 	}
 
@@ -64,6 +78,15 @@ public class PostBox extends PostBag {
 	 * reads letters from a file and adds them to the PostBox
 	 */
 	public void loadLettersFromFile() {
+		ArrayList<Letter> postbox = new ArrayList<Letter>();
+		File file = new File("src/test.txt");
+		try (ObjectInputStream in = 
+				new ObjectInputStream(new FileInputStream(file))){
+			postbox = (ArrayList<Letter>) in.readObject();
+		} catch (IOException | ClassNotFoundException ex) {
+			System.out.printf("A problem occured deserializing %s%n", file);
+			System.out.println(ex.getMessage());
+		}
 
 	}
 
@@ -124,9 +147,7 @@ public class PostBox extends PostBag {
 
 	public static void main(String[] args) {
 		mainMenu();
-		PostBox a = new PostBox();
-		PostBag b = new PostBag();
-		b.addLetter(postbag);
+		
 		
 	}
 
