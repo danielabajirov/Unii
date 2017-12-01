@@ -7,7 +7,7 @@ import java.util.*;
 
 
 public class PostBox  {
-	ArrayList<Letter> postbox = new ArrayList<Letter>();
+	ArrayList<Letter> postbox;
 	
 
 	/**
